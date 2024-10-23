@@ -6,7 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Changed to min-height to allow content overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .card-container {
@@ -25,6 +26,7 @@ body {
   max-width: 600px;
   width: 100%;
   border: 4px dashed #ff80bf;
+  overflow: auto; /* Allow card content to scroll if necessary */
 }
 
 h1 {
@@ -46,8 +48,9 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 20px;
   line-height: 1.5;
-  
-  .cute-gif {
+}
+
+.cute-gif {
   width: 200px;
   margin: 20px auto;
   display: block;
